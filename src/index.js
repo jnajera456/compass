@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import AcademicStress from './pages/AcademicStress';
 import EmotionalWellbeing from './pages/EmotionalWellbeing';
+import SocialChallenges from './pages/SocialChallenges';
 import ComingSoon from './pages/ComingSoon';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -18,10 +19,7 @@ root.render(
           <Route path="/" element={<HomePage />} />
           <Route path="/academic-stress" element={<AcademicStress />} />
           <Route path="/emotional-wellbeing" element={<EmotionalWellbeing />} />
-          <Route
-            path="/social-challenges"
-            element={<ComingSoon title="Social Challenges" />}
-          />
+          <Route path="/social-challenges" element={<SocialChallenges />} />
           <Route
             path="/life-balance"
             element={<ComingSoon title="Life Balance" />}
