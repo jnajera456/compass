@@ -1,6 +1,6 @@
-import React from "react";
-import "../styling-sheets/AcademicStress.css";
-import { useRef } from "react";
+import React from 'react';
+import '../styling-sheets/AcademicStress.css';
+import { useRef } from 'react';
 function AcademicStress() {
   const procrastinationRef = useRef();
   const timeRef = useRef();
@@ -18,9 +18,9 @@ function AcademicStress() {
           <button
             className="button"
             onClick={() => {
-              const element = document.getElementById("procrastinationSection");
+              const element = document.getElementById('procrastinationSection');
               element?.scrollIntoView({
-                behavior: "smooth",
+                behavior: 'smooth',
               });
             }}
           >
@@ -29,9 +29,9 @@ function AcademicStress() {
           <button
             className="button"
             onClick={() => {
-              const element = document.getElementById("timeSection");
+              const element = document.getElementById('timeSection');
               element?.scrollIntoView({
-                behavior: "smooth",
+                behavior: 'smooth',
               });
             }}
           >
@@ -40,9 +40,9 @@ function AcademicStress() {
           <button
             className="button"
             onClick={() => {
-              const element = document.getElementById("perfectionismSection");
+              const element = document.getElementById('perfectionismSection');
               element?.scrollIntoView({
-                behavior: "smooth",
+                behavior: 'smooth',
               });
             }}
           >
@@ -52,9 +52,9 @@ function AcademicStress() {
           <button
             className="button"
             onClick={() => {
-              const element = document.getElementById("interestSection");
+              const element = document.getElementById('interestSection');
               element?.scrollIntoView({
-                behavior: "smooth",
+                behavior: 'smooth',
               });
             }}
           >
@@ -63,9 +63,9 @@ function AcademicStress() {
           <button
             className="button"
             onClick={() => {
-              const element = document.getElementById("distractionSection");
+              const element = document.getElementById('distractionSection');
               element?.scrollIntoView({
-                behavior: "smooth",
+                behavior: 'smooth',
               });
             }}
           >
@@ -74,9 +74,9 @@ function AcademicStress() {
           <button
             className="button"
             onClick={() => {
-              const element = document.getElementById("workSection");
+              const element = document.getElementById('workSection');
               element?.scrollIntoView({
-                behavior: "smooth",
+                behavior: 'smooth',
               });
             }}
           >
@@ -85,9 +85,9 @@ function AcademicStress() {
           <button
             className="button"
             onClick={() => {
-              const element = document.getElementById("fearSection");
+              const element = document.getElementById('fearSection');
               element?.scrollIntoView({
-                behavior: "smooth",
+                behavior: 'smooth',
               });
             }}
           >

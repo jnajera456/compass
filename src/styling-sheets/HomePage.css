@@ -2,86 +2,84 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-  .AppHeader {
-    background-color: #282c34;
-    text-align: center;
-    height: 60vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-    color: white;
-  }
+.AppHeader {
+  background-color: #282c34;
+  text-align: center;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  color: white;
+}
 
-  .logoContainer {
-    height: 55vmin;
-    pointer-events: none;
-  }
+.logoContainer {
+  height: 55vmin;
+  pointer-events: none;
+}
 
-  .leftHeaderContainer {
-    margin-top: 5%;
-    margin-left: 5%;
-  }
+.leftHeaderContainer {
+  margin-top: 5%;
+  margin-left: 5%;
+}
 
-  .leftTitle {
-    font-size: 70px;
-  }
+.leftTitle {
+  font-size: 70px;
+}
 
-  .mainParagraph {
-    justify-content: flex-start;
-    font-size: 20px;
-    width: 100%;
-    margin-top: 2.5%;
-    font-weight: 200;
-    line-height: 160%;
-  }
-  /**This isn't being used but maybe it could be useful?? **/
-  .bodyContainer {
-    background-color: #e8c27d;
-    height: 60vh;
-    display: flex;
-  }
+.mainParagraph {
+  justify-content: flex-start;
+  font-size: 20px;
+  width: 100%;
+  margin-top: 2.5%;
+  font-weight: 200;
+  line-height: 160%;
+}
+/**This isn't being used but maybe it could be useful?? **/
+.bodyContainer {
+  background-color: #e8c27d;
+  height: 60vh;
+  display: flex;
+}
 
-  .pageNavigatorsContainer {
-    margin-top: -50px;
-    display: flex;
-    justify-content: space-around;
-    color: white;
-  }
+.pageNavigatorsContainer {
+  margin-top: -50px;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
 
-  .pageNavigator {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 25px;
-    color: white;
-    width: 300px;
-    height: 300px;
-    text-align: center;
-    border-radius: 30px;
-    border:none;
-    margin: 4px 2px;
-    font-weight: 600;
-    padding: 40px;
-    background-color: #8cd291;
-    cursor: grab;
-    text-decoration: none;
-  }
+.pageNavigator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 25px;
+  color: white;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  border-radius: 30px;
+  border: none;
+  margin: 4px 2px;
+  font-weight: 600;
+  padding: 40px;
+  background-color: #8cd291;
+  cursor: grab;
+  text-decoration: none;
+}
 
-  .pageNavigator:hover {
-    background-color:  #486b4b;
-  }
+.pageNavigator:hover {
+  background-color: #486b4b;
+}
 
-  .pageNavigator:active {
-    box-shadow: 0px 2px 10px #202329;
-  }
+.pageNavigator:active {
+  box-shadow: 0px 2px 10px #202329;
+}
 
-  /**Make this into a universal class at some point**/
-  .shadow {
-    box-shadow: 0px -10px 10px #202329;
-  }
-
-  
+/**Make this into a universal class at some point**/
+.shadow {
+  box-shadow: 0px -10px 10px #202329;
+}
