@@ -27,13 +27,13 @@
 }
 
 .leftTitle {
-  font-size: 70px;
+  font-size: clamp(2.4rem, 6vw, 70px);
 }
 
 .mainParagraph {
   justify-content: flex-start;
-  font-size: 20px;
-  width: 100%;
+  font-size: clamp(1rem, 2.2vw, 20px);
+  max-width: 640px;
   margin-top: 2.5%;
   font-weight: 200;
   line-height: 160%;
@@ -48,7 +48,10 @@
 .pageNavigatorsContainer {
   margin-top: -50px;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 0 5%;
   color: white;
 }
 
@@ -56,14 +59,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 25px;
+  flex: 1 1 240px;
+  max-width: 320px;
+  min-height: 260px;
+  font-size: clamp(1.1rem, 2.5vw, 25px);
   color: white;
-  width: 300px;
-  height: 300px;
   text-align: center;
   border-radius: 30px;
   border: none;
-  margin: 4px 2px;
   font-weight: 600;
   padding: 40px;
   background-color: #8cd291;
@@ -87,4 +90,31 @@
 /**Make this into a universal class at some point**/
 .shadow {
   box-shadow: 0px -10px 10px #202329;
+}
+
+@media (max-width: 768px) {
+  .AppHeader {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+
+  .leftHeaderContainer {
+    margin: 0;
+    padding: 24px 5% 0;
+  }
+
+  .mainParagraph {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .logoContainer {
+    height: 40vmin;
+  }
+
+  .pageNavigatorsContainer {
+    margin-top: 24px;
+  }
 }
