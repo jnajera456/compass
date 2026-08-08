@@ -56,6 +56,15 @@
   justify-content: first baseline;
 }
 
+.pageIntro {
+  margin-bottom: 24px;
+  max-width: 70ch;
+  font-weight: 300;
+  color: #282c34;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
 .sectionTitle {
   font-weight: 600;
   color: #282c34;
