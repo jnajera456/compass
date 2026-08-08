@@ -19,15 +19,21 @@ function HomePage() {
         <img src={logo} className="logoContainer" alt="logo" />
       </div>
       <div className="pageNavigatorsContainer">
-        <Link to="/AcademicStress" className={cx('pageNavigator', 'shadow')}>
+        <Link to="/academic-stress" className={cx('pageNavigator', 'shadow')}>
           Academic Stress
         </Link>
-        <div className={cx('pageNavigator', 'shadow')}>
-          Emotional <br />
-          Well-being
-        </div>
-        <div className={cx('pageNavigator', 'shadow')}>Social Challenges</div>
-        <div className={cx('pageNavigator', 'shadow')}>Life Balance</div>
+        <Link
+          to="/emotional-wellbeing"
+          className={cx('pageNavigator', 'shadow')}
+        >
+          Emotional Well-being
+        </Link>
+        <Link to="/social-challenges" className={cx('pageNavigator', 'shadow')}>
+          Social Challenges
+        </Link>
+        <Link to="/life-balance" className={cx('pageNavigator', 'shadow')}>
+          Life Balance
+        </Link>
       </div>
     </div>
   );

@@ -4,3 +4,49 @@
   box-sizing: border-box;
   font-family: 'Space Grotesk', sans-serif;
 }
+
+.siteHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  background-color: #282c34;
+  padding: 16px 5%;
+}
+
+.siteBrand {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.siteNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.navLink {
+  color: #d7dbe0;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.navLink:hover {
+  color: white;
+}
+
+.navLink:focus-visible {
+  outline: 3px solid #8cd291;
+  outline-offset: 2px;
+}
+
+.navLinkActive {
+  color: #8cd291;
+  border-bottom-color: #8cd291;
+}
