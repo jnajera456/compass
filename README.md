@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Compass
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Find your way through college life.**
 
-## Available Scripts
+Compass is a mental-health and well-being resource for college students. It offers clear, grounded, non-clinical guidance for the challenges that weigh on students most, and points toward real help when more support is needed.
 
-In the project directory, you can run:
+Live site: https://jnajera456.github.io/compass
 
-### `npm start`
+![Compass home page](docs/screenshot-home.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+College pulls students in many directions at once. Compass organizes practical guidance into four areas, each with common struggles broken down into Symptoms, Causes, Strategies, and Actionable Advice:
 
-### `npm test`
+- **Academic Stress**: procrastination, time management, perfectionism, focus, and more
+- **Emotional Well-being**: anxiety, low mood, overwhelm, homesickness, loneliness, self-esteem
+- **Social Challenges**: making friends, roommate conflict, social anxiety, boundaries
+- **Life Balance**: priorities, money stress, sleep, physical health, burnout, routines
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A **Resources** page surfaces crisis lines (the 988 Suicide and Crisis Lifeline and the Crisis Text Line), and a sitewide note makes clear that Compass is a starting point, not a substitute for professional help.
 
-### `npm run build`
+![Academic Stress page](docs/screenshot-academic-stress.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Content and sourcing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The guidance is written in a plain, human voice and grounded in general recommendations from reputable organizations, including the National Institute of Mental Health, the American Psychological Association, the Centers for Disease Control and Prevention, and the Jed Foundation. Each content page lists its sources.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Compass is a student project and an informational resource. It is not medical advice.
 
-### `npm run eject`
+## Tech stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React 18 (Create React App)
+- React Router 7
+- Plain CSS with a shared component layout
+- Jest and React Testing Library
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+npm start      # run the dev server at http://localhost:3000
+npm test       # run the test suite
+npm run build  # production build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Deployment
 
-## Learn More
+The site deploys to GitHub Pages:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run deploy
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This builds the app, adds an SPA fallback so deep links work, and publishes the `build` folder to the `gh-pages` branch.
 
-### Code Splitting
+## Project structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+src/
+  components/      Header, Footer, Layout, and the shared TopicPage
+  pages/           HomePage, the four category pages, and Resources
+  styling-sheets/  Component and page styles
+  index.js         App routes
+```
