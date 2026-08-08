@@ -10,12 +10,13 @@
   align-items: center;
   color: white;
   background-color: #282c34;
-  height: 30vh;
+  min-height: 30vh;
+  padding: 16px 0;
 }
 
 .mainTitle {
   margin-left: 5%;
-  font-size: 70px;
+  font-size: clamp(2rem, 5.5vw, 70px);
 }
 
 .buttonsContainer {
@@ -23,6 +24,8 @@
   margin-left: 5%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .button {
@@ -42,7 +45,7 @@
 }
 
 .button:active {
-  margin-top: 60px;
+  transform: translateY(1px);
 }
 
 #procrastinationSection {
@@ -59,7 +62,7 @@
 .sectionTitle {
   font-weight: 600;
   color: #282c34;
-  font-size: 50px;
+  font-size: clamp(1.9rem, 7vw, 50px);
 }
 
 .infoContainer {
@@ -70,7 +73,7 @@
   margin-top: 10px;
   font-weight: 400;
   color: #282c34;
-  font-size: 40px;
+  font-size: clamp(1.5rem, 5vw, 40px);
 }
 
 .infoParagraph {
@@ -79,6 +82,23 @@
   font-weight: 300;
   color: #282c34;
   font-size: 20px;
-  width: 75%;
-  line-height: 25px;
+  max-width: 70ch;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .buttonsContainer {
+    width: 90%;
+  }
+
+  .body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
