@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/compass/static/css/main.284051f0.css",
+    "main.js": "/compass/static/js/main.f2d1ca48.js",
+    "static/js/453.369cde6e.chunk.js": "/compass/static/js/453.369cde6e.chunk.js",
+    "index.html": "/compass/index.html",
+    "main.284051f0.css.map": "/compass/static/css/main.284051f0.css.map",
+    "main.f2d1ca48.js.map": "/compass/static/js/main.f2d1ca48.js.map",
+    "453.369cde6e.chunk.js.map": "/compass/static/js/453.369cde6e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.284051f0.css",
+    "static/js/main.f2d1ca48.js"
+  ]
+}
