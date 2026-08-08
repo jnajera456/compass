@@ -1,430 +1,211 @@
 import React from 'react';
 import '../styling-sheets/AcademicStress.css';
 
+const topics = [
+  {
+    id: 'procrastinationSection',
+    label: 'Procrastination',
+    symptoms:
+      'You keep putting off work you know matters, and the deadline creeps closer. Assignments stack up, and a quiet sense of guilt tags along.',
+    causes:
+      'Procrastination is rarely just laziness. More often it is avoidance: a task that feels too big, fear of doing it badly, or not knowing where to begin. Anxiety and fuzzy priorities feed it.',
+    strategies:
+      "Shrink the task until the first step feels almost too easy. Swap 'write the paper' for 'open a doc and jot three points.' Pick a specific start time, and add a little accountability, like a friend who expects to see progress.",
+    advice: [
+      'Start with one small action, like opening the file or setting up your space. Momentum usually follows the first step.',
+      'Work in short, focused blocks with a break between them, such as 25 minutes on and 5 off.',
+      'Tell a friend or mentor your goal and set a quick check-in so someone knows your deadline.',
+      'Cut distractions while you work: silence notifications and use a site blocker if you need one.',
+      'Reward yourself when you finish a milestone to keep the momentum going.',
+    ],
+  },
+  {
+    id: 'timeSection',
+    label: 'Time Management',
+    symptoms:
+      'Deadlines sneak up, work happens at the last minute, and it feels like there is never enough time to go around.',
+    causes:
+      'This usually comes from taking on too much, not ranking what matters, or underestimating how long things actually take. Without a routine, it snowballs.',
+    strategies:
+      'Plan the day and block out time for real work. Rank tasks by importance and urgency, and take a few minutes each week to see what worked and adjust.',
+    advice: [
+      'Start each day by naming your top three priorities and doing those first.',
+      'Put commitments and study blocks on a calendar so your time is visible.',
+      'Schedule short breaks to stay fresh during long stretches of work.',
+      'Review at the end of the week to spot what slowed you down.',
+      'Drop or hand off commitments that are not essential.',
+    ],
+  },
+  {
+    id: 'perfectionismSection',
+    label: 'Perfectionism',
+    symptoms:
+      'You have trouble finishing, polish the same work over and over, and stay unsatisfied even when it is good.',
+    causes:
+      'It often grows from fear of criticism, tying your worth to your output, or holding yourself to standards no one could meet.',
+    strategies:
+      'Aim for progress over perfect. Get feedback early instead of hiding the work until it is flawless, and treat mistakes as a normal part of getting better.',
+    advice: [
+      'Set a time limit for a task so you stop over-polishing minor details.',
+      'Remind yourself that good enough really is enough for most work.',
+      'Keep the big picture in view, since one flawless task does not make or break the whole.',
+      'For low-stakes work, call it done around 80 percent and move on.',
+      'Reward yourself for finishing on time, even when it is not perfect.',
+    ],
+  },
+  {
+    id: 'interestSection',
+    label: 'Lack of Interest in the Subject',
+    symptoms:
+      'Motivation runs low, focus is hard to hold, and the work feels like a chore you are dragging yourself through.',
+    causes:
+      'This tends to show up when you cannot see the point, the material is delivered in a dull way, or the subject does not fit your strengths.',
+    strategies:
+      'Tie the subject to something you actually care about or a goal you are chasing. Look for better materials, like a good video or podcast, and set concrete, finishable goals.',
+    advice: [
+      'Write down how the subject connects to your goals, and keep it where you can see it.',
+      'Use visual or interactive aids to make the material easier to engage with.',
+      'Study with a group or talk topics through with a classmate.',
+      'Ask a professor for real-world examples or extra resources.',
+      'Reward yourself for finishing study sessions.',
+    ],
+  },
+  {
+    id: 'distractionSection',
+    label: 'Distractions (e.g., Social Media)',
+    symptoms:
+      'Your focus keeps breaking, tasks stretch far longer than they should, and you reach the end of the day with little to show.',
+    causes:
+      'Distractions offer a quick escape from stress or boredom, and the brain likes the fast reward. That makes them hard to resist.',
+    strategies:
+      'Set boundaries and pick specific times for social media. Use blockers or timers to protect focused work, and practice gently bringing your attention back to one task.',
+    advice: [
+      'Turn on Do Not Disturb or leave your phone in another room while you study.',
+      'Use an app or site blocker to limit the biggest time sinks.',
+      'Schedule social media breaks so the urge to check has a place to go.',
+      'Set up a clear, uncluttered spot to work.',
+      'Notice how you feel after a stretch of focused work, and use that to reinforce the habit.',
+    ],
+  },
+  {
+    id: 'workSection',
+    label: 'Cluttered Workspace',
+    symptoms:
+      'It is harder to concentrate, you lose time hunting for what you need, and the mess adds a low sense of chaos.',
+    causes:
+      'Disorganization usually comes from not having the time or a system to stay tidy, or from clutter piling up during a busy stretch.',
+    strategies:
+      'Reset your space on a regular rhythm. Give your materials a home so they are easy to find, and clear out what you do not need.',
+    advice: [
+      'Spend ten minutes tidying at the end of each day to stop clutter from building.',
+      'Set up zones for different activities, like studying, reading, and planning.',
+      'Label storage so things are quick to find and put away.',
+      'Keep only the essentials on your desk.',
+      'Set a weekly reminder for a deeper clean.',
+    ],
+  },
+  {
+    id: 'fearSection',
+    label: 'Fear of Failure',
+    symptoms:
+      'You avoid challenges, put things off, and carry a lot of anxiety about how they will turn out. Self-doubt creeps in.',
+    causes:
+      'This fear often traces back to past setbacks, pressure from others, or a belief that failing says something about your worth.',
+    strategies:
+      'Treat failure as information rather than a verdict. Practice a little self-compassion, set realistic goals, and use mindfulness to take the edge off fear-driven thoughts.',
+    advice: [
+      'Think of a past setback and write down one or two things it taught you.',
+      'Break big tasks into smaller goals so they feel less intimidating.',
+      "Use steadier self-talk, like 'I am learning and improving.'",
+      'Schedule real rest and downtime to keep stress in check.',
+      'Lean on friends or mentors who encourage you to keep going.',
+    ],
+  },
+];
+
+const sources = [
+  {
+    label: 'American Psychological Association: Stress',
+    url: 'https://www.apa.org/topics/stress',
+  },
+  {
+    label: 'National Institute of Mental Health: Caring for Your Mental Health',
+    url: 'https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health',
+  },
+  {
+    label: 'Centers for Disease Control and Prevention: About Mental Health',
+    url: 'https://www.cdc.gov/mental-health/',
+  },
+  {
+    label: 'The Jed Foundation: Mental Health Resource Center',
+    url: 'https://jedfoundation.org/mental-health-resource-center/',
+  },
+];
+
+function scrollToSection(id) {
+  const element = document.getElementById(id);
+  element?.scrollIntoView({ behavior: 'smooth' });
+}
+
 function AcademicStress() {
   return (
     <div>
       <div className="headerContainer">
         <h1 className="mainTitle">Academic Stress</h1>
         <div className="buttonsContainer">
-          <button
-            className="button"
-            onClick={() => {
-              const element = document.getElementById('procrastinationSection');
-              element?.scrollIntoView({
-                behavior: 'smooth',
-              });
-            }}
-          >
-            Procrastination
-          </button>
-          <button
-            className="button"
-            onClick={() => {
-              const element = document.getElementById('timeSection');
-              element?.scrollIntoView({
-                behavior: 'smooth',
-              });
-            }}
-          >
-            Time Management
-          </button>
-          <button
-            className="button"
-            onClick={() => {
-              const element = document.getElementById('perfectionismSection');
-              element?.scrollIntoView({
-                behavior: 'smooth',
-              });
-            }}
-          >
-            Perfectionism
-          </button>
-
-          <button
-            className="button"
-            onClick={() => {
-              const element = document.getElementById('interestSection');
-              element?.scrollIntoView({
-                behavior: 'smooth',
-              });
-            }}
-          >
-            Lack of Interest
-          </button>
-          <button
-            className="button"
-            onClick={() => {
-              const element = document.getElementById('distractionSection');
-              element?.scrollIntoView({
-                behavior: 'smooth',
-              });
-            }}
-          >
-            Distractions
-          </button>
-          <button
-            className="button"
-            onClick={() => {
-              const element = document.getElementById('workSection');
-              element?.scrollIntoView({
-                behavior: 'smooth',
-              });
-            }}
-          >
-            Cluttered Workspace
-          </button>
-          <button
-            className="button"
-            onClick={() => {
-              const element = document.getElementById('fearSection');
-              element?.scrollIntoView({
-                behavior: 'smooth',
-              });
-            }}
-          >
-            Fear of Failure
-          </button>
+          {topics.map(topic => (
+            <button
+              key={topic.id}
+              type="button"
+              className="button"
+              onClick={() => scrollToSection(topic.id)}
+            >
+              {topic.label}
+            </button>
+          ))}
         </div>
       </div>
 
       <div className="body">
-        <div id="procrastinationSection">
-          <h2 className="sectionTitle">Procrastination</h2>
-          <div className="infoContainer">
-            <h2 className="subsectionTitle">Symptoms</h2>
-            <p className="infoParagraph">
-              Procrastination manifests as delaying tasks despite knowing their
-              importance. Students may experience increased anxiety as deadlines
-              approach, incomplete assignments, and a persistent feeling of
-              guilt or inadequacy.
-            </p>
+        {topics.map(topic => (
+          <div key={topic.id} id={topic.id}>
+            <h2 className="sectionTitle">{topic.label}</h2>
+            <div className="infoContainer">
+              <h3 className="subsectionTitle">Symptoms</h3>
+              <p className="infoParagraph">{topic.symptoms}</p>
 
-            <h2 className="subsectionTitle">Causes</h2>
-            <p className="infoParagraph">
-              Procrastination can stem from various factors, such as fear of
-              failure, perfectionism, or feeling overwhelmed by the size or
-              complexity of a task. Low motivation, distractions (like social
-              media), or a lack of clarity about where to start also contribute
-              significantly. In some cases, it may be a symptom of deeper
-              issues, such as anxiety or poor time management habits.
-            </p>
+              <h3 className="subsectionTitle">Causes</h3>
+              <p className="infoParagraph">{topic.causes}</p>
 
-            <h2 className="subsectionTitle">Strategies</h2>
-            <p className="infoParagraph">
-              Combat procrastination by breaking tasks into smaller, actionable
-              steps that feel less intimidating. For example, instead of "write
-              the paper," aim for "create an outline" or "write the
-              introduction." Build routines and habits around consistent work
-              times, and incorporate accountability mechanisms, like study
-              groups or productivity partners, to maintain focus. Use
-              prioritization techniques, such as the Eisenhower Matrix, to
-              determine which tasks are most urgent or important. Lastly,
-              address emotional barriers like fear of failure by reminding
-              yourself that starting imperfectly is better than not starting at
-              all.
-            </p>
+              <h3 className="subsectionTitle">Strategies</h3>
+              <p className="infoParagraph">{topic.strategies}</p>
 
-            <h2 className="subsectionTitle">Actionable Advice</h2>
-            <p className="infoParagraph">
-              1. Start Small: Begin with a single, manageable action, such as
-              setting up your workspace or opening the document you need to work
-              on. Momentum often builds after the initial step.
-              <br />
-              2. Use the Pomodoro Technique: Work in focused intervals, such as
-              25 minutes of work followed by a 5-minute break. This method can
-              reduce feelings of overwhelm and increase productivity over time.
-              <br />
-              3. Create Accountability: Share your goals with a friend or mentor
-              and set regular check-ins to discuss progress. Knowing someone is
-              aware of your deadlines can increase motivation.
-              <br />
-              4. Limit Distractions: Turn off notifications, use
-              website-blocking tools, and create a dedicated, clutter-free study
-              space to improve focus.
-              <br />
-              5. Reward Yourself: Set up small rewards for completing
-              milestones, such as a short walk, a snack, or a favorite activity,
-              to reinforce positive behaviors and keep motivation high.
-            </p>
+              <h3 className="subsectionTitle">Actionable Advice</h3>
+              <ol className="adviceList">
+                {topic.advice.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ol>
+            </div>
           </div>
-        </div>
-        <div id="timeSection">
-          <h2 className="sectionTitle">Time Management</h2>
-          <div className="infoContainer">
-            <h2 className="subsectionTitle">Symptoms</h2>
-            <p className="infoParagraph">
-              Poor time management leads to missed deadlines, last-minute work,
-              and chronic stress. Students may feel overwhelmed and struggle to
-              balance academic, social, and personal responsibilities.
-            </p>
+        ))}
 
-            <h2 className="subsectionTitle">Causes</h2>
-            <p className="infoParagraph">
-              This often arises from overcommitting, failing to prioritize
-              tasks, or underestimating the time required for activities. A lack
-              of structured routines further compounds the issue.
-            </p>
-
-            <h2 className="subsectionTitle">Strategies</h2>
-            <p className="infoParagraph">
-              Adopt structured planning techniques, such as creating a daily
-              schedule or using time-blocking. Prioritize tasks based on urgency
-              and importance using methods like the Eisenhower Matrix. Reflect
-              weekly on what strategies worked and adjust your plans
-              accordingly.
-            </p>
-
-            <h2 className="subsectionTitle">Actionable Advice</h2>
-            <p className="infoParagraph">
-              1. Start each day by listing your top three priorities and focus
-              on those first.
-              <br />
-              2. Use a planner or digital app like Google Calendar to allocate
-              time effectively.
-              <br />
-              3. Schedule regular, short breaks to avoid burnout during long
-              study sessions.
-              <br />
-              4. Reflect at the end of the week to identify productivity
-              roadblocks and solutions.
-              <br />
-              5. Delegate or eliminate non-essential commitments to free up time
-              for important tasks.
-            </p>
-          </div>
-        </div>
-
-        <div id="perfectionismSection">
-          <h2 className="sectionTitle">Perfectionism</h2>
-          <div className="infoContainer">
-            <h2 className="subsectionTitle">Symptoms</h2>
-            <p className="infoParagraph">
-              Perfectionism is characterized by excessive focus on details,
-              difficulty finishing tasks due to high standards, and
-              dissatisfaction even with quality work. This can lead to stress,
-              procrastination, or burnout.
-            </p>
-
-            <h2 className="subsectionTitle">Causes</h2>
-            <p className="infoParagraph">
-              It often stems from the need for external validation, fear of
-              criticism, or self-imposed pressure to excel. Unrealistic
-              expectations or overvaluing outcomes over effort may also drive
-              perfectionism.
-            </p>
-
-            <h2 className="subsectionTitle">Strategies</h2>
-            <p className="infoParagraph">
-              Shift your mindset from “perfect or nothing” to “progress over
-              perfection.” Focus on completing tasks efficiently rather than
-              flawlessly. Seek feedback early in the process to avoid
-              overanalyzing. Normalize the idea that mistakes are part of growth
-              and improvement.
-            </p>
-
-            <h2 className="subsectionTitle">Actionable Advice</h2>
-            <p className="infoParagraph">
-              1. Set a time limit for tasks to prevent over-focusing on minor
-              details.
-              <br />
-              2. Use affirmations like “Good enough is enough” to challenge
-              perfectionist thinking.
-              <br />
-              3. Regularly remind yourself of the big picture—perfection in one
-              task doesn’t guarantee overall success.
-              <br />
-              4. Finish tasks at 80% completion for non-critical work to
-              practice letting go of perfectionism.
-              <br />
-              5. Reward yourself for completing tasks on time, even if they’re
-              not flawless.
-            </p>
-          </div>
-        </div>
-
-        <div id="interestSection">
-          <h2 className="sectionTitle">Lack of Interest in the Subject</h2>
-          <div className="infoContainer">
-            <h2 className="subsectionTitle">Symptoms</h2>
-            <p className="infoParagraph">
-              Disinterest in a subject often results in low motivation,
-              difficulty focusing, and procrastination. Assignments may feel
-              like tedious obligations, leading to suboptimal performance.
-            </p>
-
-            <h2 className="subsectionTitle">Causes</h2>
-            <p className="infoParagraph">
-              This disinterest arises from an inability to see the subject’s
-              relevance to personal goals, uninspiring teaching methods, or a
-              mismatch with individual passions or strengths.
-            </p>
-
-            <h2 className="subsectionTitle">Strategies</h2>
-            <p className="infoParagraph">
-              Find connections between the subject and your personal interests
-              or career aspirations. Explore alternative resources like
-              podcasts, videos, or case studies to make the material more
-              engaging. Set specific, tangible goals for completing work in the
-              subject to maintain focus.
-            </p>
-
-            <h2 className="subsectionTitle">Actionable Advice</h2>
-            <p className="infoParagraph">
-              1. Research how the subject relates to your future goals and write
-              down those connections.
-              <br />
-              2. Incorporate study aids like visual diagrams or interactive
-              tools to make learning more engaging.
-              <br />
-              3. Join a study group or discuss topics with peers to bring a
-              collaborative energy to the subject.
-              <br />
-              4. Ask professors for real-world applications or additional
-              resources to inspire interest.
-              <br />
-              5. Reward yourself for completing study sessions to make the
-              experience more enjoyable.
-            </p>
-          </div>
-        </div>
-
-        <div id="distractionSection">
-          <h2 className="sectionTitle">Distractions (e.g., Social media)</h2>
-          <div className="infoContainer">
-            <h2 className="subsectionTitle">Symptoms</h2>
-            <p className="infoParagraph">
-              Distractions like social media reduce focus and extend task
-              completion times. Students may find themselves spending hours
-              unproductively and feeling unaccomplished by the end of the day.
-            </p>
-
-            <h2 className="subsectionTitle">Causes</h2>
-            <p className="infoParagraph">
-              Distractions often provide an escape from stress or boredom. The
-              brain’s natural desire for instant gratification and dopamine
-              rewards makes it hard to resist these interruptions.
-            </p>
-
-            <h2 className="subsectionTitle">Strategies</h2>
-            <p className="infoParagraph">
-              Set boundaries for distractions by allocating specific times for
-              social media use. Use productivity tools like website blockers or
-              timers to create a distraction-free work environment. Practice
-              mindfulness techniques to stay present and focused on the task at
-              hand.
-            </p>
-
-            <h2 className="subsectionTitle">Actionable Advice</h2>
-            <p className="infoParagraph">
-              1. Turn on “Do Not Disturb” mode or put your phone in another room
-              while studying.
-              <br />
-              2. Use productivity apps like StayFocusd or Forest to limit access
-              to distracting websites.
-              <br />
-              3. Schedule dedicated times for social media breaks to reduce the
-              urge to check constantly.
-              <br />
-              4. Create a distraction-free workspace that encourages focus.
-              <br />
-              5. Reflect on how you feel after completing tasks without
-              interruptions to reinforce the habit.
-            </p>
-          </div>
-        </div>
-
-        <div id="workSection">
-          <h2 className="sectionTitle">Cluttered Workspace</h2>
-          <div className="infoContainer">
-            <h2 className="subsectionTitle">Symptoms</h2>
-            <p className="infoParagraph">
-              A cluttered workspace can cause difficulty concentrating,
-              increased stress, and wasted time looking for necessary materials.
-              It often reduces productivity and creates a sense of chaos.
-            </p>
-
-            <h2 className="subsectionTitle">Causes</h2>
-            <p className="infoParagraph">
-              Disorganization may stem from a lack of time, storage solutions,
-              or procrastination in cleaning. An overwhelming schedule can also
-              make it difficult to maintain order.
-            </p>
-
-            <h2 className="subsectionTitle">Strategies</h2>
-            <p className="infoParagraph">
-              Dedicate time daily or weekly to organize your workspace. Use
-              storage systems, such as filing cabinets or labeled containers, to
-              keep materials accessible and neat. Declutter by removing
-              unnecessary items to create a calming and focused environment.
-            </p>
-
-            <h2 className="subsectionTitle">Actionable Advice</h2>
-            <p className="infoParagraph">
-              1. Spend 10 minutes at the end of each day tidying your workspace
-              to prevent buildup.
-              <br />
-              2. Create designated zones for different activities, like
-              studying, reading, or brainstorming.
-              <br />
-              3. Label storage containers to make finding items quicker and
-              easier.
-              <br />
-              4. Keep only essentials on your desk to minimize distractions.
-              <br />
-              5. Set a recurring weekly reminder to deep-clean your workspace
-              and refresh its organization.
-            </p>
-          </div>
-        </div>
-
-        <div id="fearSection">
-          <h2 className="sectionTitle">Fear of Failure</h2>
-          <div className="infoContainer">
-            <h2 className="subsectionTitle">Symptoms</h2>
-            <p className="infoParagraph">
-              Fear of failure often leads to avoiding challenges, hesitating to
-              take risks, and excessive anxiety about outcomes. Students may
-              experience feelings of inadequacy, doubt their abilities, and
-              delay tasks to avoid potential negative results.
-            </p>
-
-            <h2 className="subsectionTitle">Causes</h2>
-            <p className="infoParagraph">
-              This fear stems from past negative experiences, societal or
-              familial pressures, or an internalized belief that failure
-              reflects personal worth. Perfectionistic tendencies or comparing
-              oneself to others can amplify these fears.
-            </p>
-
-            <h2 className="subsectionTitle">Strategies</h2>
-            <p className="infoParagraph">
-              Reframe failure as a stepping stone for growth and improvement.
-              Practice self-compassion by recognizing that everyone makes
-              mistakes and that they are part of the learning process. Set
-              realistic goals that prioritize progress over perfection. Engage
-              in mindfulness practices to remain present and reduce the impact
-              of fear-driven thoughts.
-            </p>
-
-            <h2 className="subsectionTitle">Actionable Advice</h2>
-            <p className="infoParagraph">
-              1. Reflect on a past failure and write down one or two lessons it
-              taught you.
-              <br />
-              2. Break large tasks into smaller, manageable goals to reduce the
-              intimidation factor.
-              <br />
-              3. Practice positive self-talk, such as “I am learning and
-              improving,” to counter negative thoughts.
-              <br />
-              4. Schedule time for relaxation or mindfulness exercises to keep
-              stress levels in check.
-              <br />
-              5. Surround yourself with supportive peers or mentors who
-              encourage resilience.
-            </p>
-          </div>
+        <div className="sources">
+          <h2 className="sourcesTitle">Sources</h2>
+          <p className="sourcesNote">
+            The guidance on this page draws on general recommendations from
+            these organizations. For personal support, reach out to your campus
+            counseling center or a licensed professional.
+          </p>
+          <ul className="sourcesList">
+            {sources.map(source => (
+              <li key={source.url}>
+                <a href={source.url} target="_blank" rel="noreferrer">
+                  {source.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
