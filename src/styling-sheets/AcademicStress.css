@@ -48,9 +48,6 @@
   transform: translateY(1px);
 }
 
-#procrastinationSection {
-}
-
 .body {
   margin-left: 2.5%;
   margin-top: 50px;
@@ -84,6 +81,57 @@
   font-size: 20px;
   max-width: 70ch;
   line-height: 1.6;
+}
+
+.adviceList {
+  margin-left: 1%;
+  margin-top: 15px;
+  padding-left: 22px;
+  max-width: 70ch;
+  font-weight: 300;
+  color: #282c34;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.adviceList li {
+  margin-bottom: 8px;
+}
+
+.sources {
+  margin: 40px 2.5% 60px;
+  max-width: 70ch;
+}
+
+.sourcesTitle {
+  font-weight: 600;
+  color: #282c34;
+  font-size: clamp(1.9rem, 7vw, 50px);
+}
+
+.sourcesNote {
+  margin-top: 12px;
+  font-weight: 300;
+  color: #282c34;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.sourcesList {
+  margin-top: 16px;
+  padding-left: 22px;
+  color: #282c34;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.sourcesList a {
+  color: #486b4b;
+  font-weight: 600;
+}
+
+.sourcesList a:hover {
+  color: #282c34;
 }
 
 @media (max-width: 768px) {
