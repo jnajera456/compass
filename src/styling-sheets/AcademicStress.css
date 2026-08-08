@@ -1,85 +1,84 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .headerContainer {
-    display: flex;
-    align-items: center;
-    color: white;
-    background-color: #282c34;
-    height: 30vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #282c34;
+  height: 30vh;
 }
 
 .mainTitle {
-    margin-left: 5%;
-    font-size: 70px;
+  margin-left: 5%;
+  font-size: 70px;
 }
 
 .buttonsContainer {
-    width: 60%;
-    margin-left: 5%;
-    display: flex;
-    flex-direction: row;
+  width: 60%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
 }
 
 .button {
-    font-weight: 600;
-    font-size: 20px;
-    color: #282c34;
-    background-color: #8cd291;
-    border-radius: 50px;
-    padding: 15px;
-    border-style: none;
-    cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  color: #282c34;
+  background-color: #8cd291;
+  border-radius: 50px;
+  padding: 15px;
+  border-style: none;
+  cursor: pointer;
 }
 
 .button:hover {
-    color: white;
-    background-color:  #486b4b;
+  color: white;
+  background-color: #486b4b;
 }
 
 .button:active {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 #procrastinationSection {
-    
 }
 
 .body {
-    margin-left: 2.5%;
-    margin-top: 50px;
-    display:flex;
-    flex-direction: column;
-    justify-content: first baseline;
+  margin-left: 2.5%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
 }
 
 .sectionTitle {
-    font-weight: 600;
-    color: #282c34;
-    font-size: 50px;
+  font-weight: 600;
+  color: #282c34;
+  font-size: 50px;
 }
 
 .infoContainer {
-    margin-left: 2.5%;
-    margin-bottom: 5%;
+  margin-left: 2.5%;
+  margin-bottom: 5%;
 }
 .subsectionTitle {
-    margin-top: 10px;
-    font-weight: 400;
-    color: #282c34;;
-    font-size: 40px;
+  margin-top: 10px;
+  font-weight: 400;
+  color: #282c34;
+  font-size: 40px;
 }
 
 .infoParagraph {
-    margin-left: 1%;
-    margin-top: 15px;
-    font-weight: 300;
-    color: #282c34;
-    font-size: 20px;
-    width: 75%;
-    line-height: 25px;
+  margin-left: 1%;
+  margin-top: 15px;
+  font-weight: 300;
+  color: #282c34;
+  font-size: 20px;
+  width: 75%;
+  line-height: 25px;
 }
