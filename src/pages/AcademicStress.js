@@ -1,15 +1,7 @@
 import React from 'react';
 import '../styling-sheets/AcademicStress.css';
-import { useRef } from 'react';
-function AcademicStress() {
-  const procrastinationRef = useRef();
-  const timeRef = useRef();
-  const perfectRef = useRef();
-  const interestRef = useRef();
-  const distractionRef = useRef();
-  const workRef = useRef();
-  const fearRef = useRef();
 
+function AcademicStress() {
   return (
     <div>
       <div className="headerContainer">
@@ -96,8 +88,8 @@ function AcademicStress() {
         </div>
       </div>
 
-      <div body className="body">
-        <div ref={procrastinationRef} id="procrastinationSection">
+      <div className="body">
+        <div id="procrastinationSection">
           <h2 className="sectionTitle">Procrastination</h2>
           <div className="infoContainer">
             <h2 className="subsectionTitle">Symptoms</h2>
@@ -157,51 +149,53 @@ function AcademicStress() {
             </p>
           </div>
         </div>
-        <div ref={timeRef} id="timeSection"></div>
-        <h2 className="sectionTitle">Time Management</h2>
-        <div className="infoContainer">
-          <h2 className="subsectionTitle">Symptoms</h2>
-          <p className="infoParagraph">
-            Poor time management leads to missed deadlines, last-minute work,
-            and chronic stress. Students may feel overwhelmed and struggle to
-            balance academic, social, and personal responsibilities.
-          </p>
+        <div id="timeSection">
+          <h2 className="sectionTitle">Time Management</h2>
+          <div className="infoContainer">
+            <h2 className="subsectionTitle">Symptoms</h2>
+            <p className="infoParagraph">
+              Poor time management leads to missed deadlines, last-minute work,
+              and chronic stress. Students may feel overwhelmed and struggle to
+              balance academic, social, and personal responsibilities.
+            </p>
 
-          <h2 className="subsectionTitle">Causes</h2>
-          <p className="infoParagraph">
-            This often arises from overcommitting, failing to prioritize tasks,
-            or underestimating the time required for activities. A lack of
-            structured routines further compounds the issue.
-          </p>
+            <h2 className="subsectionTitle">Causes</h2>
+            <p className="infoParagraph">
+              This often arises from overcommitting, failing to prioritize
+              tasks, or underestimating the time required for activities. A lack
+              of structured routines further compounds the issue.
+            </p>
 
-          <h2 className="subsectionTitle">Strategies</h2>
-          <p className="infoParagraph">
-            Adopt structured planning techniques, such as creating a daily
-            schedule or using time-blocking. Prioritize tasks based on urgency
-            and importance using methods like the Eisenhower Matrix. Reflect
-            weekly on what strategies worked and adjust your plans accordingly.
-          </p>
+            <h2 className="subsectionTitle">Strategies</h2>
+            <p className="infoParagraph">
+              Adopt structured planning techniques, such as creating a daily
+              schedule or using time-blocking. Prioritize tasks based on urgency
+              and importance using methods like the Eisenhower Matrix. Reflect
+              weekly on what strategies worked and adjust your plans
+              accordingly.
+            </p>
 
-          <h2 className="subsectionTitle">Actionable Advice</h2>
-          <p className="infoParagraph">
-            1. Start each day by listing your top three priorities and focus on
-            those first.
-            <br />
-            2. Use a planner or digital app like Google Calendar to allocate
-            time effectively.
-            <br />
-            3. Schedule regular, short breaks to avoid burnout during long study
-            sessions.
-            <br />
-            4. Reflect at the end of the week to identify productivity
-            roadblocks and solutions.
-            <br />
-            5. Delegate or eliminate non-essential commitments to free up time
-            for important tasks.
-          </p>
+            <h2 className="subsectionTitle">Actionable Advice</h2>
+            <p className="infoParagraph">
+              1. Start each day by listing your top three priorities and focus
+              on those first.
+              <br />
+              2. Use a planner or digital app like Google Calendar to allocate
+              time effectively.
+              <br />
+              3. Schedule regular, short breaks to avoid burnout during long
+              study sessions.
+              <br />
+              4. Reflect at the end of the week to identify productivity
+              roadblocks and solutions.
+              <br />
+              5. Delegate or eliminate non-essential commitments to free up time
+              for important tasks.
+            </p>
+          </div>
         </div>
 
-        <div ref={perfectRef} id="perfectionismSection">
+        <div id="perfectionismSection">
           <h2 className="sectionTitle">Perfectionism</h2>
           <div className="infoContainer">
             <h2 className="subsectionTitle">Symptoms</h2>
@@ -249,7 +243,7 @@ function AcademicStress() {
           </div>
         </div>
 
-        <div ref={interestRef} id="interestSection">
+        <div id="interestSection">
           <h2 className="sectionTitle">Lack of Interest in the Subject</h2>
           <div className="infoContainer">
             <h2 className="subsectionTitle">Symptoms</h2>
@@ -295,7 +289,7 @@ function AcademicStress() {
           </div>
         </div>
 
-        <div ref={distractionRef} id="distractionSection">
+        <div id="distractionSection">
           <h2 className="sectionTitle">Distractions (e.g., Social media)</h2>
           <div className="infoContainer">
             <h2 className="subsectionTitle">Symptoms</h2>
@@ -340,7 +334,7 @@ function AcademicStress() {
           </div>
         </div>
 
-        <div ref={workRef} id="workSection">
+        <div id="workSection">
           <h2 className="sectionTitle">Cluttered Workspace</h2>
           <div className="infoContainer">
             <h2 className="subsectionTitle">Symptoms</h2>
@@ -384,7 +378,7 @@ function AcademicStress() {
           </div>
         </div>
 
-        <div ref={fearRef} id="fearSection">
+        <div id="fearSection">
           <h2 className="sectionTitle">Fear of Failure</h2>
           <div className="infoContainer">
             <h2 className="subsectionTitle">Symptoms</h2>
