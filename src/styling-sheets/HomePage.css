@@ -67,12 +67,17 @@
   font-weight: 600;
   padding: 40px;
   background-color: #8cd291;
-  cursor: grab;
+  cursor: pointer;
   text-decoration: none;
 }
 
 .pageNavigator:hover {
   background-color: #486b4b;
+}
+
+.pageNavigator:focus-visible {
+  outline: 3px solid #282c34;
+  outline-offset: 3px;
 }
 
 .pageNavigator:active {
