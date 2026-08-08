@@ -1,0 +1,84 @@
+.resources {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 5% 60px;
+}
+
+.resourcesTitle {
+  font-size: clamp(2.2rem, 6vw, 60px);
+  font-weight: 600;
+  color: #282c34;
+}
+
+.resourcesIntro {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #282c34;
+}
+
+.resourceCard {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 20px;
+  background-color: #f2f5f2;
+  border: 1px solid #d9e2d9;
+}
+
+.resourceName {
+  font-size: clamp(1.4rem, 5vw, 28px);
+  font-weight: 600;
+  color: #282c34;
+}
+
+.resourceText {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #282c34;
+}
+
+.resourceActions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.resourceButton {
+  font-size: 16px;
+  font-weight: 600;
+  color: #282c34;
+  background-color: #8cd291;
+  padding: 10px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.resourceButton:hover {
+  color: white;
+  background-color: #486b4b;
+}
+
+.resourceButton:focus-visible {
+  outline: 3px solid #282c34;
+  outline-offset: 2px;
+}
+
+.resourceLink {
+  font-size: 16px;
+  font-weight: 600;
+  color: #486b4b;
+  text-decoration: underline;
+}
+
+.resourcesNote {
+  margin-top: 28px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #282c34;
+}

@@ -8,6 +8,7 @@ const navItems = [
   { to: '/emotional-wellbeing', label: 'Emotional Well-being' },
   { to: '/social-challenges', label: 'Social Challenges' },
   { to: '/life-balance', label: 'Life Balance' },
+  { to: '/resources', label: 'Resources' },
 ];
 
 function Header() {

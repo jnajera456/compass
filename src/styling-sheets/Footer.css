@@ -1,0 +1,20 @@
+.siteFooter {
+  margin-top: 40px;
+  padding: 20px 5%;
+  background-color: #282c34;
+  color: #d7dbe0;
+}
+
+.siteFooterText {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.siteFooterText a {
+  color: #8cd291;
+  font-weight: 600;
+}
