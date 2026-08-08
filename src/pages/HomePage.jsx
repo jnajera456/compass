@@ -2,21 +2,24 @@ import React from 'react';
 import '../styling-sheets/HomePage.css';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
-import logo from '../pickle-logo.png';
 
 function HomePage() {
   return (
     <div>
       <div className="AppHeader">
         <div className="leftHeaderContainer">
-          <h1 className="leftTitle">Got Yourself In A Pickle?</h1>
+          <h1 className="leftTitle">Find your way through college life.</h1>
           <p className="mainParagraph">
-            You don't have to "dill" with it alone! Find solutions to whatever’s
-            weighing you down and reclaim your peace of mind! Explore tools
-            designed to help you navigate college life with ease.
+            College can pull you in a lot of directions at once. Compass points
+            you toward clear, practical help for what weighs on students most,
+            so you can steady yourself and keep moving forward.
           </p>
         </div>
-        <img src={logo} className="logoContainer" alt="logo" />
+        <img
+          src={`${process.env.PUBLIC_URL}/compass.svg`}
+          className="logoContainer"
+          alt="Compass logo"
+        />
       </div>
       <div className="pageNavigatorsContainer">
         <Link to="/academic-stress" className={cx('pageNavigator', 'shadow')}>

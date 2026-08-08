@@ -14,7 +14,7 @@ function Header() {
   return (
     <header className="siteHeader">
       <Link to="/" className="siteBrand">
-        Pickle Aid
+        Compass
       </Link>
       <nav className="siteNav" aria-label="Primary">
         {navItems.map(item => (
