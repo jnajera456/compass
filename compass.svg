@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Compass">
-  <circle cx="100" cy="100" r="94" fill="#2b303a" stroke="#8cd291" stroke-width="5" />
-  <circle cx="100" cy="100" r="80" fill="none" stroke="#8cd291" stroke-width="2" opacity="0.4" />
-  <g stroke="#8cd291" stroke-width="4" stroke-linecap="round">
+  <circle cx="100" cy="100" r="94" fill="#2f5a46" stroke="#8fbfa2" stroke-width="5" />
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#8fbfa2" stroke-width="2" opacity="0.5" />
+  <g stroke="#8fbfa2" stroke-width="4" stroke-linecap="round">
     <line x1="100" y1="12" x2="100" y2="26" />
     <line x1="100" y1="174" x2="100" y2="188" />
     <line x1="12" y1="100" x2="26" y2="100" />
     <line x1="174" y1="100" x2="188" y2="100" />
   </g>
-  <polygon points="100,34 88,100 112,100" fill="#8cd291" />
-  <polygon points="100,166 88,100 112,100" fill="#e8c27d" />
-  <circle cx="100" cy="100" r="7" fill="#ffffff" />
+  <polygon points="100,34 88,100 112,100" fill="#f6f3ec" />
+  <polygon points="100,166 88,100 112,100" fill="#cf8a45" />
+  <circle cx="100" cy="100" r="7" fill="#f6f3ec" />
 </svg>
