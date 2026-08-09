@@ -1,20 +1,24 @@
 .siteFooter {
-  margin-top: 40px;
-  padding: 20px 5%;
-  background-color: #282c34;
-  color: #d7dbe0;
+  background-color: var(--forest);
+  color: #e7efe8;
 }
 
 .siteFooterText {
-  max-width: 900px;
+  max-width: var(--maxw);
   margin: 0 auto;
-  font-size: 15px;
-  font-weight: 300;
+  padding: 26px 24px;
+  font-size: 0.95rem;
+  font-weight: 400;
   line-height: 1.6;
   text-align: center;
 }
 
 .siteFooterText a {
-  color: #8cd291;
-  font-weight: 600;
+  color: #f0d9bf;
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
+.siteFooterText a:hover {
+  color: #ffffff;
 }

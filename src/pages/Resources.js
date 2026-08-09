@@ -4,6 +4,7 @@ import '../styling-sheets/Resources.css';
 function Resources() {
   return (
     <div className="resources">
+      <p className="eyebrow">Support</p>
       <h1 className="resourcesTitle">Resources</h1>
       <p className="resourcesIntro">
         If you are in crisis or just need to talk to someone now, help is

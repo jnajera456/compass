@@ -1,52 +1,81 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Space Grotesk', sans-serif;
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(246, 243, 236, 0.86);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--line);
 }
 
-.siteHeader {
+.siteHeaderInner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 14px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   flex-wrap: wrap;
-  gap: 12px;
-  background-color: #282c34;
-  padding: 16px 5%;
 }
 
 .siteBrand {
-  color: white;
-  font-size: 24px;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
+  color: var(--forest);
+}
+
+.brandMark {
+  width: 30px;
+  height: 30px;
+}
+
+.brandWord {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
 }
 
 .siteNav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 20px;
+  align-items: center;
+  gap: 4px 6px;
 }
 
 .navLink {
-  color: #d7dbe0;
-  font-size: 16px;
-  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: var(--pill);
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
   text-decoration: none;
-  padding: 6px 4px;
-  border-bottom: 2px solid transparent;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
 }
 
 .navLink:hover {
-  color: white;
-}
-
-.navLink:focus-visible {
-  outline: 3px solid #8cd291;
-  outline-offset: 2px;
+  color: var(--ink);
+  background-color: var(--sage-soft);
 }
 
 .navLinkActive {
-  color: #8cd291;
-  border-bottom-color: #8cd291;
+  color: var(--forest);
+  background-color: var(--sage-soft);
+}
+
+@media (max-width: 720px) {
+  .siteNav {
+    width: 100%;
+    gap: 2px;
+  }
+
+  .navLink {
+    padding: 6px 10px;
+    font-size: 0.88rem;
+  }
 }
