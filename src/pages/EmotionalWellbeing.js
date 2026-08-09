@@ -33,7 +33,7 @@ const topics = [
       'Reach out to one person, even a short message counts.',
       'Do one small activity you usually enjoy, without waiting to feel motivated first.',
       'Get some daylight and movement each day.',
-      'If low mood lasts more than two weeks or feels heavy, reach out to a counselor. If you are thinking about harming yourself, call or text 988 right away.',
+      'If low mood lasts more than two weeks or feels heavy, reach out to a counselor or your campus health service.',
     ],
   },
   {

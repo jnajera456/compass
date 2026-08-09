@@ -7,7 +7,6 @@ import AcademicStress from './pages/AcademicStress';
 import EmotionalWellbeing from './pages/EmotionalWellbeing';
 import SocialChallenges from './pages/SocialChallenges';
 import LifeBalance from './pages/LifeBalance';
-import Resources from './pages/Resources';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -22,7 +21,6 @@ root.render(
           <Route path="/emotional-wellbeing" element={<EmotionalWellbeing />} />
           <Route path="/social-challenges" element={<SocialChallenges />} />
           <Route path="/life-balance" element={<LifeBalance />} />
-          <Route path="/resources" element={<Resources />} />
         </Route>
       </Routes>
     </BrowserRouter>
