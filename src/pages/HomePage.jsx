@@ -109,9 +109,6 @@ function HomePage() {
               <a href="#directions" className="btnPrimary">
                 Explore the four directions
               </a>
-              <Link to="/resources" className="btnGhost">
-                Need help now?
-              </Link>
             </div>
           </div>
           <div className="heroArt">
@@ -152,23 +149,6 @@ function HomePage() {
               </span>
             </Link>
           ))}
-        </div>
-      </section>
-
-      <section className="supportBand">
-        <div className="supportInner container">
-          <div>
-            <h2 className="supportTitle">
-              You do not have to navigate the hard days alone.
-            </h2>
-            <p className="supportText">
-              If you are in crisis or just need to talk to someone now, free and
-              confidential help is available any time.
-            </p>
-          </div>
-          <Link to="/resources" className="btnPrimary">
-            See support resources
-          </Link>
         </div>
       </section>
     </div>

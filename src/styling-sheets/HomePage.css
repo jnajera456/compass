@@ -65,23 +65,6 @@
   transform: translateY(-2px);
 }
 
-.btnGhost {
-  display: inline-flex;
-  align-items: center;
-  padding: 14px 22px;
-  border-radius: var(--pill);
-  border: 1.5px solid var(--forest);
-  color: var(--forest);
-  font-weight: 700;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background-color 0.15s ease;
-}
-
-.btnGhost:hover {
-  background-color: var(--sage-soft);
-}
-
 .heroArt {
   display: flex;
   justify-content: center;
@@ -186,33 +169,6 @@
 
 .dirCard:hover .dirGo svg {
   transform: translateX(4px);
-}
-
-/* Support band */
-.supportBand {
-  background-color: var(--sage-soft);
-  border-top: 1px solid var(--line);
-}
-
-.supportInner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-  flex-wrap: wrap;
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-
-.supportTitle {
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
-  max-width: 24ch;
-}
-
-.supportText {
-  margin-top: 10px;
-  max-width: 46ch;
-  color: var(--ink-soft);
 }
 
 @media (max-width: 860px) {
