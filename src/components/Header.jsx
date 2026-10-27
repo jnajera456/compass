@@ -12,19 +12,11 @@ const navItems = [
 
 function BrandMark() {
   return (
-    <svg className="brandMark" viewBox="0 0 40 40" aria-hidden="true">
-      <circle
-        cx="20"
-        cy="20"
-        r="18"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-      />
-      <polygon points="20,7 15,20 25,20" fill="currentColor" />
-      <polygon points="20,33 15,20 25,20" fill="#cf8a45" />
-      <circle cx="20" cy="20" r="2.4" fill="#f6f3ec" />
-    </svg>
+    <img
+      className="brandMark"
+      src={`${process.env.PUBLIC_URL}/compass.svg`}
+      alt=""
+    />
   );
 }
 

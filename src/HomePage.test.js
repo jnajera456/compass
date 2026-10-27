@@ -2,6 +2,20 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 
+const originalPublicUrl = process.env.PUBLIC_URL;
+
+beforeAll(() => {
+  process.env.PUBLIC_URL = '/compass';
+});
+
+afterAll(() => {
+  if (originalPublicUrl === undefined) {
+    delete process.env.PUBLIC_URL;
+    return;
+  }
+  process.env.PUBLIC_URL = originalPublicUrl;
+});
+
 test('renders links to all four category pages', () => {
   render(
     <MemoryRouter>
@@ -21,4 +35,9 @@ test('renders links to all four category pages', () => {
     'href',
     '/life-balance'
   );
+  expect(
+    screen.getByRole('img', {
+      name: /compass logo combining a profile and navigation needle/i,
+    })
+  ).toHaveAttribute('src', '/compass/compass-mark.svg');
 });

@@ -31,64 +31,11 @@ const categories = [
 
 function HeroCompass() {
   return (
-    <svg
+    <img
       className="heroCompass"
-      viewBox="0 0 320 320"
-      role="img"
-      aria-label="Compass rose"
-    >
-      <circle
-        cx="160"
-        cy="160"
-        r="150"
-        fill="#ffffff"
-        stroke="#8fbfa2"
-        strokeWidth="2"
-      />
-      <circle
-        cx="160"
-        cy="160"
-        r="120"
-        fill="none"
-        stroke="#e6dfcf"
-        strokeWidth="1.5"
-      />
-      <g stroke="#2f5a46" strokeWidth="3" strokeLinecap="round" opacity="0.5">
-        <line x1="160" y1="20" x2="160" y2="40" />
-        <line x1="160" y1="280" x2="160" y2="300" />
-        <line x1="20" y1="160" x2="40" y2="160" />
-        <line x1="280" y1="160" x2="300" y2="160" />
-      </g>
-      <polygon points="160,55 142,160 178,160" fill="#2f5a46" />
-      <polygon points="160,265 142,160 178,160" fill="#cf8a45" />
-      <circle
-        cx="160"
-        cy="160"
-        r="10"
-        fill="#ffffff"
-        stroke="#2f5a46"
-        strokeWidth="2"
-      />
-      <g
-        fill="#22282a"
-        fontFamily="Fraunces, serif"
-        fontSize="22"
-        textAnchor="middle"
-      >
-        <text x="160" y="88">
-          N
-        </text>
-        <text x="236" y="168">
-          E
-        </text>
-        <text x="160" y="250">
-          S
-        </text>
-        <text x="84" y="168">
-          W
-        </text>
-      </g>
-    </svg>
+      src={`${process.env.PUBLIC_URL}/compass-mark.svg`}
+      alt="Compass logo combining a profile and navigation needle"
+    />
   );
 }
 
