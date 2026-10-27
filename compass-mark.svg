@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Compass logo combining a profile and navigation needle">
+  <g fill="#2f5a46">
+    <path
+      fill-rule="evenodd"
+      d="M58 36 306 68c86 11 140 66 148 152l22 254-246-40c-91-15-153-80-165-165ZM238 379l2-24c1-14-9-23-23-22l-22 2c-18 2-30-6-30-20v-8c-10-3-15-9-15-18l2-12-13-7c-12-5-15-15-9-25l18-31v-21c3-42 34-73 77-75 44-2 82 27 90 69 6 33-5 59-19 86-10 19-9 38 1 58l21 42 1 6Z"
+    />
+    <circle cx="226" cy="201" r="48" fill="none" stroke="#2f5a46" stroke-width="10" />
+    <path d="m226 149-13 52h26Zm0 104-13-52h26Z" />
+    <circle cx="226" cy="201" r="7" />
+  </g>
+</svg>
