@@ -18,26 +18,35 @@ afterAll(() => {
 
 test('renders links to all four category pages', () => {
   render(
-    <MemoryRouter>
+    <MemoryRouter basename="/compass" initialEntries={['/compass/']}>
       <HomePage />
     </MemoryRouter>
   );
   expect(
     screen.getByRole('link', { name: /academic stress/i })
-  ).toHaveAttribute('href', '/academic-stress');
+  ).toHaveAttribute('href', '/compass/academic-stress');
   expect(
     screen.getByRole('link', { name: /emotional well-being/i })
-  ).toHaveAttribute('href', '/emotional-wellbeing');
+  ).toHaveAttribute('href', '/compass/emotional-wellbeing');
   expect(
     screen.getByRole('link', { name: /social challenges/i })
-  ).toHaveAttribute('href', '/social-challenges');
+  ).toHaveAttribute('href', '/compass/social-challenges');
   expect(screen.getByRole('link', { name: /life balance/i })).toHaveAttribute(
     'href',
-    '/life-balance'
+    '/compass/life-balance'
   );
   expect(
     screen.getByRole('img', {
       name: /compass logo combining a profile and navigation needle/i,
     })
   ).toHaveAttribute('src', '/compass/compass-mark.svg');
+  expect(
+    screen.getByRole('heading', {
+      level: 1,
+      name: /find your way through college life/i,
+    })
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole('link', { name: /explore the four directions/i })
+  ).toHaveAttribute('href', '#directions');
 });

@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import EmotionalWellbeing from './pages/EmotionalWellbeing';
 
 test('renders emotional well-being topics and a verified sources list', () => {
-  render(<EmotionalWellbeing />);
+  const { container } = render(
+    <MemoryRouter>
+      <EmotionalWellbeing />
+    </MemoryRouter>
+  );
   expect(
     screen.getByRole('heading', { name: /emotional well-being/i })
   ).toBeInTheDocument();
@@ -18,4 +23,5 @@ test('renders emotional well-being topics and a verified sources list', () => {
     'href',
     'https://www.nimh.nih.gov/health/topics/anxiety-disorders'
   );
+  expect(container.querySelector('details')).toHaveAttribute('open');
 });

@@ -45,15 +45,16 @@ function HomePage() {
       <section className="hero">
         <div className="heroInner container">
           <div className="heroText">
-            <p className="eyebrow">College well-being, made navigable</p>
-            <h1 className="heroTitle">Find your way through college life.</h1>
+            <h1 className="heroTitle" tabIndex="-1">
+              Find your way through college life.
+            </h1>
             <p className="heroLede">
               College can pull you in a lot of directions at once. Compass
               points you toward clear, practical help for what weighs on
               students most, so you can steady yourself and keep moving forward.
             </p>
             <div className="heroActions">
-              <a href="#directions" className="btnPrimary">
+              <a href="#directions" className="primaryAction">
                 Explore the four directions
               </a>
             </div>
@@ -64,23 +65,23 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="directions container" id="directions">
+      <section className="directions container" id="directions" tabIndex="-1">
         <div className="directionsHead">
-          <p className="eyebrow">Four directions</p>
           <h2 className="directionsTitle">
             Wherever you are stuck, start here.
           </h2>
         </div>
-        <div className="cardGrid">
+        <nav className="directionIndex" aria-label="Compass guides">
           {categories.map(cat => (
-            <Link key={cat.to} to={cat.to} className="dirCard">
-              <span className="dirBadge" aria-hidden="true">
+            <Link key={cat.to} to={cat.to} className="directionRow">
+              <span className="directionCode" aria-hidden="true">
                 {cat.dir}
               </span>
-              <span className="dirName">{cat.name}</span>
-              <span className="dirDesc">{cat.desc}</span>
-              <span className="dirGo" aria-hidden="true">
-                Explore
+              <span className="directionCopy">
+                <span className="directionName">{cat.name}</span>
+                <span className="directionDesc">{cat.desc}</span>
+              </span>
+              <span className="directionArrow" aria-hidden="true">
                 <svg
                   viewBox="0 0 24 24"
                   width="18"
@@ -96,7 +97,7 @@ function HomePage() {
               </span>
             </Link>
           ))}
-        </div>
+        </nav>
       </section>
     </div>
   );

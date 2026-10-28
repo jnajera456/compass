@@ -20,6 +20,7 @@
     "start": "react-scripts start --openssl-legacy-provider",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:ui": "npm run build && playwright test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build && cp build/index.html build/404.html",
     "deploy": "gh-pages -d build"
@@ -49,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.1",
     "eslint": "^8.57.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",

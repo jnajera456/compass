@@ -1,136 +1,42 @@
-.guide {
-  padding-bottom: 48px;
-}
-
-.guideHeader {
-  background: radial-gradient(
-      900px 380px at 90% -20%,
-      var(--sage-soft),
-      transparent 60%
-    ),
-    var(--paper);
-  border-bottom: 1px solid var(--line);
-  padding-top: 56px;
-  padding-bottom: 40px;
-}
-
-.guideTitle {
-  margin-top: 12px;
-  font-size: clamp(2.4rem, 5.2vw, 3.6rem);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
-
-.guideIntro {
-  margin-top: 18px;
-  max-width: 60ch;
-  font-size: 1.18rem;
-  line-height: 1.7;
-  color: var(--ink-soft);
-}
-
-.topicNav {
-  margin-top: 28px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.topicChip {
-  padding: 9px 16px;
-  border-radius: var(--pill);
-  border: 1px solid var(--line);
-  background-color: var(--card);
-  color: var(--forest);
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: 0.92rem;
-  cursor: pointer;
-  transition:
-    background-color 0.15s ease,
-    border-color 0.15s ease,
-    transform 0.15s ease;
-}
-
-.topicChip:hover {
-  background-color: var(--sage-soft);
-  border-color: var(--sage);
-  transform: translateY(-1px);
-}
-
-.guideBody {
-  padding-top: 20px;
-}
-
-.topicBlock {
-  padding: 40px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.topicBlock:last-of-type {
-  border-bottom: none;
-}
-
-.topicTitle {
-  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
-  font-weight: 560;
-}
-
-.topicGrid {
-  margin-top: 22px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 26px 32px;
-}
-
 .part {
   border-top: 2px solid var(--sage);
-  padding-top: 14px;
-}
-
-.partWide {
-  grid-column: 1 / -1;
-  border-top-color: var(--amber);
+  padding-top: var(--space-4);
 }
 
 .partLabel {
   margin: 0;
   font-family: var(--sans);
   font-weight: 700;
-  font-size: 0.74rem;
+  font-size: 0.8125rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--forest);
 }
 
-.partWide .partLabel {
-  color: var(--amber);
-}
-
 .partText {
-  margin-top: 8px;
+  margin-top: var(--space-3);
   color: var(--ink);
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.65;
   max-width: 68ch;
 }
 
 .adviceList {
-  margin: 14px 0 0;
+  margin: var(--space-4) 0 0;
   padding: 0;
   list-style: none;
   counter-reset: advice;
   display: grid;
-  gap: 12px;
+  gap: var(--space-3);
   max-width: 72ch;
 }
 
 .adviceList li {
   counter-increment: advice;
   position: relative;
-  padding-left: 42px;
+  padding-left: var(--space-7);
   color: var(--ink);
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -138,7 +44,7 @@
   content: counter(advice);
   position: absolute;
   left: 0;
-  top: 1px;
+  top: 0;
   width: 28px;
   height: 28px;
   display: inline-flex;
@@ -146,18 +52,16 @@
   justify-content: center;
   border-radius: 50%;
   background-color: var(--amber-soft);
-  color: var(--amber);
+  color: var(--amber-ink);
   font-family: var(--display);
   font-weight: 600;
   font-size: 0.92rem;
 }
 
 .sources {
-  margin-top: 8px;
-  padding: 28px;
-  border-radius: var(--radius-lg);
-  background-color: var(--paper-2);
-  border: 1px solid var(--line);
+  margin-top: var(--space-8);
+  padding: var(--space-7) 0 0;
+  border-top: 1px solid var(--line);
 }
 
 .sourcesTitle {
@@ -165,7 +69,7 @@
 }
 
 .sourcesNote {
-  margin-top: 10px;
+  margin-top: var(--space-3);
   max-width: 66ch;
   color: var(--ink-soft);
   font-size: 1rem;
@@ -173,10 +77,10 @@
 }
 
 .sourcesList {
-  margin-top: 14px;
-  padding-left: 20px;
+  margin-top: var(--space-4);
+  padding-left: var(--space-5);
   display: grid;
-  gap: 8px;
+  gap: var(--space-2);
   color: var(--ink);
 }
 
@@ -187,11 +91,130 @@
 }
 
 .sourcesList a:hover {
-  color: var(--amber);
+  color: var(--amber-ink);
 }
 
-@media (max-width: 640px) {
-  .topicGrid {
+.guide {
+  padding-bottom: 0;
+}
+
+.guideHeader {
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-6);
+  background: var(--paper);
+}
+
+.guideTitle {
+  margin-top: 0;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.guideIntro {
+  max-width: var(--reading);
+  margin-top: var(--space-4);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.guideDisclosureBody {
+  padding-top: 0;
+  padding-bottom: var(--space-8);
+}
+
+.topicDisclosureList {
+  border-top: 1px solid var(--line);
+}
+
+.topicDisclosure {
+  border-bottom: 1px solid var(--line);
+}
+
+.topicSummary {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+.topicSummary::-webkit-details-marker {
+  display: none;
+}
+
+.topicSummaryHeading {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+}
+
+.topicNumber {
+  color: var(--forest);
+  font: 800 0.8125rem/1 var(--sans);
+  letter-spacing: 0.12em;
+}
+
+.topicChevron {
+  color: var(--forest);
+  transition: transform 160ms ease-out;
+}
+
+.topicDisclosure[open] .topicChevron {
+  transform: rotate(180deg);
+}
+
+.topicDisclosureContent {
+  padding: var(--space-2) 0 var(--space-7) var(--space-8);
+}
+
+.topicEssentials {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.adviceSection {
+  max-width: var(--reading);
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 2px solid var(--amber);
+}
+
+.adviceSection .partLabel {
+  color: var(--amber-ink);
+}
+
+@media (max-width: 60rem) {
+  .topicEssentials {
     grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+}
+
+@media (max-width: 42rem) {
+  .guideHeader {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-5);
+  }
+
+  .guideTitle {
+    font-size: 2.5rem;
+  }
+
+  .topicSummaryHeading {
+    grid-template-columns: 32px minmax(0, 1fr) 24px;
+    gap: var(--space-3);
+    font-size: 1.35rem;
+  }
+
+  .topicDisclosureContent {
+    padding: var(--space-2) 0 var(--space-6);
+  }
+
+  .sources {
+    margin-top: var(--space-7);
+    padding-top: var(--space-6);
   }
 }

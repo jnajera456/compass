@@ -2,189 +2,212 @@
   overflow-x: hidden;
 }
 
-/* Hero */
 .hero {
-  background: radial-gradient(
-      1100px 480px at 85% -10%,
-      var(--sage-soft),
-      transparent 60%
-    ),
-    var(--paper);
   border-bottom: 1px solid var(--line);
 }
 
 .heroInner {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
   align-items: center;
-  gap: 40px;
-  padding-top: 76px;
-  padding-bottom: 76px;
+  gap: var(--space-8);
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
 }
 
 .heroTitle {
-  margin-top: 18px;
-  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  max-width: 12ch;
+  font-size: clamp(3rem, 5.5vw, 4.25rem);
   font-weight: 500;
-  line-height: 1.02;
+  line-height: 1;
   letter-spacing: -0.02em;
 }
 
 .heroLede {
-  margin-top: 22px;
-  max-width: 46ch;
-  font-size: 1.18rem;
-  line-height: 1.7;
+  margin-top: var(--space-5);
+  max-width: 48ch;
+  font-size: 1.125rem;
+  line-height: 1.65;
   color: var(--ink-soft);
 }
 
 .heroActions {
-  margin-top: 32px;
+  margin-top: var(--space-6);
   display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+  gap: var(--space-3);
 }
 
-.btnPrimary {
+.primaryAction {
+  min-height: 48px;
   display: inline-flex;
   align-items: center;
-  padding: 14px 24px;
-  border-radius: var(--pill);
+  justify-content: center;
+  padding: 0 var(--space-5);
+  border-radius: var(--radius-md);
   background-color: var(--forest);
-  color: #f6f3ec;
+  color: var(--paper);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   text-decoration: none;
   transition:
-    transform 0.15s ease,
-    background-color 0.15s ease;
+    transform 160ms ease-out,
+    background-color 160ms ease-out;
 }
 
-.btnPrimary:hover {
+.primaryAction:hover {
   background-color: var(--forest-deep);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .heroArt {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .heroCompass {
-  width: min(100%, 360px);
+  width: min(100%, 320px);
   height: auto;
-  filter: drop-shadow(0 20px 40px rgba(34, 40, 42, 0.12));
 }
 
-/* Directions */
 .directions {
-  padding-top: 76px;
-  padding-bottom: 76px;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
 }
 
 .directionsHead {
-  max-width: 640px;
+  max-width: 680px;
 }
 
 .directionsTitle {
-  margin-top: 12px;
-  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  line-height: 1.04;
 }
 
-.cardGrid {
-  margin-top: 36px;
+.directionIndex {
+  margin-top: var(--space-7);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
 }
 
-.dirCard {
-  display: flex;
-  flex-direction: column;
-  padding: 28px;
-  border-radius: var(--radius-lg);
-  background-color: var(--card);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-sm);
+.directionRow {
+  min-height: 168px;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) 24px;
+  align-items: start;
+  gap: var(--space-4);
+  padding: var(--space-6) var(--space-5);
+  border-bottom: 1px solid var(--line);
   text-decoration: none;
   color: var(--ink);
   transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease,
-    border-color 0.18s ease;
+    background-color 160ms ease-out,
+    color 160ms ease-out;
 }
 
-.dirCard:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow);
-  border-color: var(--sage);
+.directionRow:nth-child(odd) {
+  border-right: 1px solid var(--line);
 }
 
-.dirBadge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--sage-soft);
+.directionRow:hover {
+  background-color: var(--paper-2);
+}
+
+.directionCode {
+  padding-top: var(--space-1);
   color: var(--forest);
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
 }
 
-.dirName {
-  margin-top: 18px;
-  font-family: var(--display);
-  font-weight: 560;
-  font-size: 1.45rem;
-  line-height: 1.15;
+.directionCopy {
+  display: grid;
+  gap: var(--space-3);
 }
 
-.dirDesc {
-  margin-top: 10px;
+.directionName {
+  font-family: var(--display);
+  font-weight: 550;
+  font-size: 1.65rem;
+  line-height: 1.08;
+}
+
+.directionDesc {
+  max-width: 34ch;
   color: var(--ink-soft);
   font-size: 1rem;
   line-height: 1.6;
 }
 
-.dirGo {
-  margin-top: 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.directionArrow {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
   color: var(--forest);
-  font-weight: 700;
-  font-size: 0.95rem;
+  transition: transform 160ms ease-out;
 }
 
-.dirCard:hover .dirGo {
-  color: var(--amber);
+.directionRow:hover .directionArrow {
+  transform: translateX(3px);
 }
 
-.dirGo svg {
-  transition: transform 0.18s ease;
-}
-
-.dirCard:hover .dirGo svg {
-  transform: translateX(4px);
-}
-
-@media (max-width: 860px) {
+@media (max-width: 60rem) {
   .heroInner {
     grid-template-columns: 1fr;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    gap: 28px;
+    gap: var(--space-7);
+    padding-top: var(--space-7);
+    padding-bottom: var(--space-7);
   }
 
   .heroArt {
-    order: -1;
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
 
   .heroCompass {
-    width: min(62%, 240px);
+    width: 140px;
+  }
+}
+
+@media (max-width: 42rem) {
+  .heroTitle {
+    font-size: clamp(2.5rem, 12vw, 3rem);
+  }
+
+  .heroLede {
+    font-size: 1.0625rem;
+  }
+
+  .heroActions {
+    margin-top: var(--space-5);
+  }
+
+  .primaryAction {
+    width: 100%;
+  }
+
+  .heroCompass {
+    width: 128px;
+  }
+
+  .directions {
+    padding-top: var(--space-7);
+    padding-bottom: var(--space-7);
+  }
+
+  .directionIndex {
+    grid-template-columns: 1fr;
+    margin-top: var(--space-6);
+  }
+
+  .directionRow {
+    min-height: 0;
+    padding: var(--space-5) 0;
+    grid-template-columns: 32px minmax(0, 1fr) 24px;
+  }
+
+  .directionRow:nth-child(odd) {
+    border-right: 0;
   }
 }

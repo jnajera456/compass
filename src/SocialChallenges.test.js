@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import SocialChallenges from './pages/SocialChallenges';
 
 test('renders social challenges topics and a verified sources list', () => {
-  render(<SocialChallenges />);
+  const { container } = render(
+    <MemoryRouter>
+      <SocialChallenges />
+    </MemoryRouter>
+  );
   expect(
     screen.getByRole('heading', { name: /social challenges/i })
   ).toBeInTheDocument();
@@ -18,4 +23,5 @@ test('renders social challenges topics and a verified sources list', () => {
     'href',
     'https://www.nimh.nih.gov/health/publications/social-anxiety-disorder-more-than-just-shyness'
   );
+  expect(container.querySelector('details')).toHaveAttribute('open');
 });

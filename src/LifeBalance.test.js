@@ -1,8 +1,13 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import LifeBalance from './pages/LifeBalance';
 
 test('renders life balance topics and a verified sources list', () => {
-  render(<LifeBalance />);
+  const { container } = render(
+    <MemoryRouter>
+      <LifeBalance />
+    </MemoryRouter>
+  );
   expect(
     screen.getByRole('heading', { name: /life balance/i })
   ).toBeInTheDocument();
@@ -14,4 +19,5 @@ test('renders life balance topics and a verified sources list', () => {
     'href',
     'https://www.cdc.gov/sleep/about/index.html'
   );
+  expect(container.querySelector('details')).toHaveAttribute('open');
 });
